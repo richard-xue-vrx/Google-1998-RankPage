@@ -1,0 +1,33 @@
+jar -cfe ./FlameIndexer.jar cis5550.jobs.Indexer -C bin cis5550/jobs/Indexer.class
+
+The command to compile the jar
+
+java -cp "lib/kvs.jar;lib/webserver.jar;lib/flame.jar" cis5550.flame.FlameSubmit localhost:9000 indexer.jar cis5550.jobs.Indexer
+
+The command to run the indexer job
+
+java -cp bin cis5550.flame.FlameSubmit localhost:9000 pagerank.jar cis5550.jobs.PageRank
+
+The command to run the pagerank job (note that in this case, the bin didn't need to be in quotation marks. This command is run in the root project directory, where bin and src should be subdirectories)
+
+java -cp "lib/kvs.jar;lib/webserver.jar;lib/flame.jar" cis5550.flame.FlameSubmit localhost:9000 crawler.jar cis5550.jobs.Crawler http://simple.crawltest.401.cis5550.net/
+
+The actual command to start the crawler. On Windows, you need the classpath in quotation marks and separated by semicolons (;).
+
+
+
+
+
+----------
+Running PageRank on data/pt-crawl 
+1) Run ./script9.bat
+2) Put data/pt-crawl into worker1/worker1
+3) Run java -cp bin cis5550.flame.FlameSubmit localhost:9000 pagerank.jar cis5550.jobs.PageRank
+4) Should take 23 iterations2
+
+----------
+
+Problem pages:
+https://web.archive.org/web/20141230081747/http:/media.gm.com/media/us/en/chevrolet/vehicles/impala/2014.detail.html/content/Pages/news/us/en/2013/Oct/1030-impala-hid.html
+Has this:
+<a href="javascript:newWindow('/content/media/us/en/chevrolet/vehicles/impala/2014/jcr:content/righttabsocialmedia/rss.newsrss.html','400','800')">
