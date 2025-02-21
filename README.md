@@ -1,9 +1,9 @@
 Groupname: RankPage
 
 Members:
-Richard Xue (committed anonymously under Richard Xue and richard-xue-vrx)
-Edison Liang
-Paul Kotys (commited under both paulk924 and ahwassa10)
+Richard Xue,
+Edison Liang,
+Paul Kotys, 
 Nimish Jayakar
 
 Third Party Libraries:
